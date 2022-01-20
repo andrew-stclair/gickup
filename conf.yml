@@ -1,0 +1,20 @@
+source:
+  github:
+    - username: andrew-stclair
+      ssh: true
+      sshkey: /gickup/id_rsa
+      excludeorgs:
+        - EpicGames
+      wiki: true # includes wiki too
+
+destination:
+  local:
+    - path: /backup
+      structured: true
+
+cron: 0 * * * *
+
+metrics:
+  prometheus:
+    endpoint: /metrics
+    listen_addr: ":6178"
