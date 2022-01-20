@@ -6,4 +6,6 @@ services:
       - './conf.yml:/gickup/conf.yml'
       - '/home/andrew/.ssh/id_rsa:/gickup/id_rsa'
       - '/bigdisk/gickup:/backup'
+    environment:
+        TZ: Australia/Melbourne
     command: ["/gickup/app", "/gickup/conf.yml"]
